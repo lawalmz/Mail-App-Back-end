@@ -34,7 +34,7 @@ app.use(cors({
   origin: ['https://mail-app-front-end.onrender.com', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
+  
 }));
 app.use(bodyParser.json());
 
