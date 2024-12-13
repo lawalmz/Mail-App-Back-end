@@ -19,7 +19,7 @@ const swaggerOptions = {
     },
     servers: [{
       url: PORT,
-    }, ],
+    },],
   },
   apis: ['./routes/mail.js'],
 };
@@ -33,7 +33,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
 app.use(bodyParser.json());
 
