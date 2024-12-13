@@ -31,7 +31,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 app.use(cors({
-  origin: ['http://localhost:3000','https://mail-app-front-end.onrender.com'],
+  origin: ['http://localhost:3000',process.env.FFRONT_END],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
