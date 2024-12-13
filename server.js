@@ -18,7 +18,7 @@ const swaggerOptions = {
       description: 'API documentation for the Mail Inbox application',
     },
     servers: [{
-      url: PORT,
+      url: "https://mail-app-back-end.onrender.com",
     },],
   },
   apis: ['./routes/mail.js'],
@@ -31,7 +31,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 app.use(cors({
-  origin: '*',
+  origin: ['https://mail-app-front-end.onrender.com', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
